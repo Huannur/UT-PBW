@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Huannur Asyary M.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+          background-image: url("https://plus.unsplash.com/premium_photo-1668473366796-636e38929ddd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+          height: 100%;
+      }
+      .title{
+          text-align: center;
+          font-size: 2.5em;
+          color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="logo">M. Huannur Asyary M.</a>
+        <ul>
+          <li><a href="#home">Homepage</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <section id="home">
+      <h1>Welcome to My Portofolio Page</h1>
+      <section>
+        <div class="image-container">
+          <img 
+          src="image/pp.jpg"
+          alt="Image">
+        </div>
+      </section>
+      <p></p>
+      <a href="#" class="btn">Learn More</a>
+      </section>
+
+      <section id="blog">
+        <div class="blog-post">
+          <div class="post-content">
+            <h1 class="post-title">Blog</h1>
+            <p class="post-meta">Oleh <a href="home">Nama Penulis</a> pada Tanggal Posting</p>
+            <p class="post-excerpt">Ini adalah cuplikan dari isi post.</p>
+            <a href="#" class="read-more-btn">Baca Selengkapnya</a>
+          </div>
+        </div>
+        
+        <p class="meta">Posted on <time datetime="2023-05-08">May 8, 2023</time> by M. Huannur Asyary M.</p>
+      </section><p><p></p></p>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>Halo, saya adalah M. Huannur, seorang mahasiswa dan pemilik website ini. Saya sangat menyukai hal-hal yang berkaitan dengan teknologi informasi, serta memiliki ketertarikan dalam hal analisis.
+           Saya memulai website ini sebagai sarana untuk memenuhi Ujian Tengah Semester dari Mata Kuliah Pemrograman Berbasis Web. Melalui website ini, saya berharap dapat memberikan manfaat dan inspirasi bagi pembaca.
+           Selain itu, saya juga memiliki pengalaman dalam organisasi yang terdapat dalam perkuliahan saat ini.
+           Saya sangat senang bisa terhubung dengan Anda dan membantu Anda dalam hal apa pun yang saya bisa. Terima kasih telah berkunjung ke website saya dan jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan atau komentar.</p>
+      </section>
+      <section id="contact">
+        <h1 class="heading">Contact</h1>
+        <form class="contact-form" action="proses-kontak.php" method="POST">
+          <h2>Hubungi Kami</h2>
+        
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        
+          <label for="pesan">Pesan:</label>
+          <textarea id="pesan" name="pesan" required></textarea>
+        
+          <button type="submit">Kirim</button>
+        </form>        
+      </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 M. Huannur Asyary M.</p>
+    </footer>
+    <script>
+      const navLinks = document.querySelectorAll('nav ul li a');
+      for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetSection = document.querySelector(navLinks[i].hash);
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    </script>
+    
+  </body>
+</html>
